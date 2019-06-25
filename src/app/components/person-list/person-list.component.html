@@ -1,0 +1,15 @@
+<table>
+  <tr *ngFor="let p of persons" (click)="setSelectedPerson(p)">
+    <td>
+      {{ p.firstname }}
+    </td>
+    <td>{{ p.lastname }}</td>
+  </tr>
+</table>
+
+<hr />
+<!-- Should be in a different component -->
+<div>
+  {{ selectedPerson?.firstname }}<br />
+  {{ selectedPerson?.lastname }}
+</div>
